@@ -92,16 +92,17 @@ def plot_forecasts(forecasts, true_values):
     st.plotly_chart(fig)
 
 # Streamlit app
-st.title("Time Series Forecasting with RNN and GRU")
+st.title("Time Series Forecasting with RNN, GRU & LSTM")
 
 uploaded_file = st.file_uploader("Upload your CSV file", type="csv")
-model_choice = st.selectbox("Select Model", ("Simple RNN", "GRU"))
+model_choice = st.selectbox("Select Model", ("Simple RNN", "GRU", "LSTM"))
 window_size = st.slider("Select Window Size", min_value=10, max_value=200, value=60, step=10)
 
 # Load model based on choice
 model_dict = {
     "Simple RNN": "RNN_model.h5",
     "GRU": "GRU_model.h5"
+    "LSTM" : "LSTM_model.h5"
 }
 model_path = model_dict[model_choice]
 model = load_model(model_path)
