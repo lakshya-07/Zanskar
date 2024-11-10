@@ -5,3 +5,5 @@ plotly
 streamlit
 scikit-learn
 matplotlib
+tqdm
+base64
