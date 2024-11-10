@@ -24,7 +24,7 @@ def set_background(image_path):
         )
 
 # Apply the background
-set_background('https://drive.usercontent.google.com/download?id=15gmLQ9jUsYa_DFT9NxlbnJfDxMJXmlAU&authuser=0')
+set_background('bg_tsa.jpg')
 
 # Function to load and preprocess the data
 def preprocess_data(file):
@@ -100,8 +100,8 @@ window_size = st.slider("Select Window Size", min_value=10, max_value=200, value
 
 # Load model based on choice
 model_dict = {
-    "Simple RNN": "C:\\Users\\Lakshya Singh\\Downloads\\RNN_model.h5",
-    "GRU": "C:\\Users\\Lakshya Singh\\Downloads\\GRU_model.h5"
+    "Simple RNN": "RNN_model.h5",
+    "GRU": "GRU_model.h5"
 }
 model_path = model_dict[model_choice]
 model = load_model(model_path)
